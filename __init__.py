@@ -72,7 +72,7 @@ class RPA_OT_Rigify_Part_Adder(bpy.types.Operator):
 
         bpy.ops.armature.metarig_sample_add(metarig_type=self.metarig_type)
 
-        if self.metarig_type == "faces.super_face":
+        if self.metarig_type == "faces.super_face" or self.metarig_type == "limbs.leg":
             bpy.ops.view3d.snap_selected_to_cursor(use_offset=True)
         else:
             bpy.ops.view3d.snap_selected_to_cursor(use_offset=False)
